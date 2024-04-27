@@ -5,5 +5,4 @@ const errorHandler = (statusCode , message ) => {
   return error
 }
 
-
 export default errorHandler;

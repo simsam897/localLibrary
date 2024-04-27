@@ -4,7 +4,7 @@ import BookCards from "./BookCards";
 const BestSellerBooks = () => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/books")
+    fetch("http://localhost:5000/api/book/books")
       .then((res) => res.json())
       .then((data) => setBooks(data.slice(0, 8)), []);
   });
