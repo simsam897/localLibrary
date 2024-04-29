@@ -52,9 +52,7 @@ const options = {
 const specification = swaggerJSDoc(options);
 
 // Routes
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+
 
 app.get("/", check);
 app.use("/api/book", bookRouter);
