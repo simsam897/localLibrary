@@ -46,9 +46,9 @@ import { Card } from "flowbite-react";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
-
+  console.log(books);
   useEffect(() => {
-    fetch("http://localhost:5000/books")
+    fetch(`http://localhost:5000/api/book/books`)
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);
@@ -63,7 +63,7 @@ const Books = () => {
             key={index} // Adding a unique key for each Card component
             className="max-w-sm"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={`/images/blog/image-${index + 1}.jpg`} // Assuming the images are named sequentially
+            imgSrc={book.imageURL} // Assuming the images are named sequentially
           >
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {book.title}{" "}

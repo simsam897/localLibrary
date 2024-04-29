@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBlog, FaBarsStaggered, FaXmark } from "react-icons/fa6";
-const Navbar = () => {
+const 
+Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSticky, setSticky] = useState(false);
 
@@ -28,9 +29,9 @@ const Navbar = () => {
   const navItems = [
     { link: "Home", path: "/" },
     { link: "Books", path: "/books" },
-    { link: "Categories", path: "/Categories" },
+    { link: "Categories", path: "/categories" },
 
-    { link: "About", path: "/About" },
+    { link: "About", path: "/about" },
   ];
 
   return (
@@ -65,7 +66,7 @@ const Navbar = () => {
             </ul>
 
             <ul className="  flex  justify-center items-center  ">
-              <Link to="/Login">
+              <Link to="/signin">
                 <button className="bg-[#14A672] text-white font-semibold px-5 py-2 rounded hover:bg-black trasition-all duration-300 mr-3   ">
                   Sign In
                 </button>

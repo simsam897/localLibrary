@@ -1,3 +1,5 @@
+import { List } from "@mui/material";
+
 const Thought = () => {
   return (
     <div className=" w-full h-90 bg-white mt-5  flex justify-center overflow-auto  ">
@@ -14,6 +16,7 @@ const Thought = () => {
         <p className=" flex justify-end text-bold  font-mono px-3 text-[#005AB3] ">
           Author:- H. Jackson Brown Jr. 92
         </p>
+     
       </div>
     </div>
   );

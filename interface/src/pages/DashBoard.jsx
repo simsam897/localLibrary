@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Bar from "../componenets/Bar";
 import Profile from "./Profile";
-import DashBoardComp from "./DashBoardComp";
+// import DashBoardComp from "./DashBoardComp";
 import Borrow from "./Borrow";
 import Return from "./Return";
 import { Welcome } from "./Welcome";

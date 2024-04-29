@@ -6,7 +6,7 @@ const PromoBanner = () => {
       <div className="flex flex-col md:flex-row justify-between items-center gap-12">
         <div className="md:w-1/2">
           <h2 className="text-4xl font-bold mb-6 leading-snug">
-            2024 national book Awards of Fiction ShortList
+            2023 national book Awards of Fiction ShortList
           </h2>
           <Link to="/shop" className=" block mt-12">
             <button className="bg-blue-700 text-white font-semibold px-5 py-2 rounded hover:bg-black trasition-all duration-300">

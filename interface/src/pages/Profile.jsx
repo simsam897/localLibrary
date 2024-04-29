@@ -1,10 +1,10 @@
 import {  TextInput } from "flowbite-react";
 export default function Profile() {
   return (
-    <div className="mt-40">
-      <div className=" max-w-2xl md:max-w-3xl  mx-auto flex flex-col gap-8 ">
+    <div className="mt-30 h-screen flex items-center ">
+      <div className=" max-w-2xl md:max-w-3xl  mx-auto flex flex-col gap-8 bg-gray-100 w-full h-2/3 px-10 rounded-lg">
 
-        <h1 className="text-3xl text-center font-bold text-blue-900">
+        <h1 className="text-3xl text-center font-bold text-blue-900 pt-5">
           Profile
         </h1>
         
@@ -13,7 +13,7 @@ export default function Profile() {
           id="username"
           placeholder="ltsu123"
           addon="Username"
-          style={{ height: "64px", fontSize: "20px" }}
+          style={{ height: "64px", fontSize: "20px",  }}
         />
 
         <TextInput
@@ -40,6 +40,7 @@ export default function Profile() {
         >
           Submit
         </button>
+
       </div>
     </div>
   );

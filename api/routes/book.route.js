@@ -100,7 +100,7 @@ router.post("/upload-book", uploadBook);
  *         description: Book not found
  */
 
-router.patch("/book/:id", updateBookData);
+router.patch("/updatebook/:id", updateBookData);
 
 /**
  * @swagger
@@ -167,6 +167,6 @@ router.get("/books", getAllBooks);
  *         description: Book not found
  */
 
-router.get("/book/:id", singleBook);
+router.get("/singlebook/:id", singleBook);
 
 export default router;

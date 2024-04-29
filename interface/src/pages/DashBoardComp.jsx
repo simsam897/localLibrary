@@ -1,9 +1,13 @@
-import Inventory from "../componenets/Inventory";
+import React from 'react'
+import Inventory from '../componenets/Inventory';
 
-export default function DashBoardComp() {
+ const DashBoardComp = () => {
   return (
-    <div className="m-auto py-5">
-      <Inventory />
+    <div className='w-full h-screen'>DashBoardComp
+<Inventory />
     </div>
-  );
+  )
 }
+
+
+export default DashBoardComp;

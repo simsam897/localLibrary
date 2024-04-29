@@ -23,32 +23,44 @@ import Sidebar from "./componenets/Sidebar";
 import Inventory from "./componenets/Inventory";
 import Categories from "./componenets/Categories";
 
+import { Lists } from "./pages/Lists";
+import AddBooks from "./pages/AddBooks";
+import Profile from "./pages/Profile";
+import Borrow from "./pages/Borrow";
+
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/about" element={<About />} />
         {/* <Route path="/Shop" element={<Shop />} /> */}
         <Route path="/Blog" element={<Blog />} />
         <Route path="/categories " element={<Categories />} />
-        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signin" element={<SignIn />}
+         />
         {/* <Route path="/SignUp" element={<SignUp />} /> */}
         <Route path="/AdminPage" element={<AdminPage />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/card" element={<LibraryCard />} />
         <Route path="/boxlist" element={<BoxList />} />
 
-        <Route path="/books/:id" element={<Books />} />
+        <Route path="/books" element={<Books />} />
 
         <Route path="/book/:id" element={<SingleBook />} />
 
         <Route path="/signup" element={<SignUpPage />} />
 
-        <Route path="/Sidebar" element={<Sidebar />} />
+        <Route path="/sidebar" element={<Sidebar />} />
 
-        <Route path="/Inventory" element={<Inventory />} />
+        <Route path="/inventory" element={<Inventory />} />
+        <Route path="/profile" element={<Profile />} />
+
+        <Route path="/list" element={<Lists />} />
+        <Route path="addbooks" element={<AddBooks />} />
+
+        <Route path="borrow" element={<Borrow />} />
       </Routes>
       <FooterComponent />
     </BrowserRouter>

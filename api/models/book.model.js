@@ -24,9 +24,9 @@ const bookSchema = new mongoose.Schema(
     isbn: {
       type: String,
     },
-    totalPages:{
+    totalPages: {
       type: Number,
-    }
+    },
   },
   { timestamps: true }
 );

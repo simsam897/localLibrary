@@ -311,7 +311,9 @@ const SingleBook = () => {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/book/${id}`);
+        const response = await fetch(
+          `http://localhost:5173/api/book/singlebook/${id}`
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch book");
         }
@@ -336,7 +338,9 @@ const SingleBook = () => {
                 src={book.imageURL}
                 alt=""
               />
-              <button className="text-bold text-3xl bg-cyan-600 rounded-lg">Borrow</button>
+              <button className="text-bold text-3xl bg-cyan-600 rounded-lg">
+                Borrow
+              </button>
             </div>
             <div className="ml-10 mb-5 mt-0 flex flex-col gap-5 ">
               <h3 className="text-3xl">
