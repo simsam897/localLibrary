@@ -53,7 +53,6 @@ const specification = swaggerJSDoc(options);
 
 // Routes
 
-
 app.get("/", check);
 app.use("/api/book", bookRouter);
 app.use("/api/user", userRoutes);
