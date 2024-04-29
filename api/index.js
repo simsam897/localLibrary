@@ -64,7 +64,7 @@ app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specification));
 
 app.use(express.static(path.join(__dirname, "/interface/dist")));
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "interface", "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "interface", "dist", "index.html"));
 });
 
 app.listen(5000, () => {
