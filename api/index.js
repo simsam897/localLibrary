@@ -6,8 +6,6 @@ import bookRouter from "./routes/book.route.js";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUI from "swagger-ui-express";
 import authRoutes from "./routes/auth.route.js";
-import check from "./controllers/user.controller.js";
-import userRoutes from "./routes/user.route.js";
 import cookieParser from "cookie-parser";
 import path from "path";
 
@@ -54,7 +52,6 @@ const specification = swaggerJSDoc(options);
 // Routes
 
 app.use("/api/book", bookRouter);
-app.use("/api/user", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specification));
 
