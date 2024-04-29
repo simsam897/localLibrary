@@ -47,10 +47,22 @@ import { Card } from "flowbite-react";
 const Books = () => {
   const [books, setBooks] = useState([]);
   console.log(books);
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/api/book/books`)
+  //     .then((res) => res.json())
+  //     .then((data) => setBooks(data));
+  // }, []);
+
   useEffect(() => {
-    fetch(`http://localhost:5000/api/book/books`)
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
+    fetch(`/api/book/books`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => setBooks(data))
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
   return (

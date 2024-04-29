@@ -311,9 +311,7 @@ const SingleBook = () => {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const response = await fetch(
-          `http://localhost:5173/api/book/singlebook/${id}`
-        );
+        const response = await fetch(`/api/book/singlebook/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch book");
         }
