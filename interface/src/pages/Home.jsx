@@ -11,7 +11,6 @@ import Thought from "../componenets/Thought";
 const Home = () => {
   return (
     <>
-     
       <Banner />
       <Thought />
       <BestSellerBooks />

@@ -58,9 +58,9 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
 
         <Route path="/list" element={<Lists />} />
-        <Route path="addbooks" element={<AddBooks />} />
+        <Route path="/addbooks" element={<AddBooks />} />
 
-        <Route path="borrow" element={<Borrow />} />
+        <Route path="/borrow" element={<Borrow />} />
       </Routes>
       <FooterComponent />
     </BrowserRouter>

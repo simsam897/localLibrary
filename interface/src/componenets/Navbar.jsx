@@ -39,7 +39,7 @@ Navbar = () => {
       <header className="w-full  bg-[#202738] top-0 left-0 right-0 translate-x-all ease-in duration-300 font-mono font-bold">
         <nav
           className={`py-1 lg:px-24 px-4 ${
-            isSticky ? "sticky top-0 left-0 right-0  bg-[]" : ""
+            isSticky && "sticky top-0 left-0 right-0  bg-[]"
           }`}
         >
           <div className="flex justify-between items-center text-base gap-8">
