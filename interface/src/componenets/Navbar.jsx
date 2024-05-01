@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBlog, FaBarsStaggered, FaXmark } from "react-icons/fa6";
-const 
-Navbar = () => {
+const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSticky, setSticky] = useState(false);
 
@@ -84,7 +83,7 @@ Navbar = () => {
             <div className="md:hidden">
               <button
                 onClick={toggleMenu}
-                className="text-black focus:outline-none"
+                className="text-white bg-white focus:outline-none"
               >
                 {isMenuOpen ? (
                   <FaXmark className="h-5 w-5 text-white" />

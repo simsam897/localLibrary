@@ -326,31 +326,28 @@ const SingleBook = () => {
   }, [id]);
 
   return (
-    <div className="mt-28 px-4 lg:px-24 ">
+    <div className="mt-5 mb-5 mx-10 px-4 lg:px-24 border-2 border-black ">
       {book ? (
         <>
-          <div className="flex  ">
+          <div className="flex  items-center  ">
             <div>
               <img
-                className="w-90 h-90 mr-6 mb-5 "
+                className="w-40 h-90 mr-6 mb-5 border-2 border-gray-600"
                 src={book.imageURL}
                 alt=""
               />
-              <button className="text-bold text-3xl bg-cyan-600 rounded-lg">
-                Borrow
-              </button>
             </div>
-            <div className="ml-10 mb-5 mt-0 flex flex-col gap-5 ">
-              <h3 className="text-3xl">
+            <div className="ml-10  mb-10 flex flex-col gap-5  ">
+              <h3 className="text-2xl mt-10 ">
                 {" "}
-                <span className=" text-bold text-4xl">
+                <span className="  text-bold text-3xl ">
                   Author Of Book:{" "}
                 </span>{" "}
                 {book.authorName}
               </h3>{" "}
-              <h1 className="text-3xl">
+              <h1 className="text-2xl">
                 {" "}
-                <span className=" text-bold text-4xl">
+                <span className=" text-bold text-3xl">
                   {" "}
                   Title Of Book :
                 </span>{" "}
@@ -372,6 +369,9 @@ const SingleBook = () => {
                 <span className=" text-bold text-3xl">pages:</span> :{" "}
                 {book.pages}
               </h1>
+              <button className="text-bold text-3xl bg-[#005AB3]rounded-lg">
+                Borrow
+              </button>
             </div>
           </div>
 

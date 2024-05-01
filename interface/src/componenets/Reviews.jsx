@@ -59,10 +59,35 @@ const Reviews = () => {
               </div>
               <div className="mt-7">
                 <p className="mb-5 text-black">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, optio modi vitae in dolorum alias animi facere
-                  pariatur distinctio magni iusto impedit officia ad incidunt
-                  eos, exercitationem, odit praesentium iste.
+                "I appreciate the well-organized layout of the library. It's easy to find the sections I'm interested in, which saves me time."
+                </p>
+
+                <Avatar
+                  img={propic}
+                  alt="avatar of Jese"
+                  rounded
+                  className="w-10 mb-4"
+                />
+                <h5 className="text-lg font-medium text-black">SAM</h5>
+                <p className="text-base text-black">Web Developer</p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide
+            className="shadow-2xl  py-8 px-8 rounded-lg border  "
+            style={{ backgroundColor: "white" }}
+          >
+            <div className="space-y-6 ">
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className="mt-7">
+                <p className="mb-5 text-black">
+                The library does a great job of keeping its collection up-to-date with current trends and topics. I always find new and relevant books to explore."
                 </p>
 
                 <Avatar
@@ -72,7 +97,91 @@ const Reviews = () => {
                   className="w-10 mb-4"
                 />
                 <h5 className="text-lg font-medium text-black">Jese Leos</h5>
-                <p className="text-base text-black">Web Developer</p>
+                <p className="text-base text-black">DR.ENT</p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide
+            className="shadow-2xl  py-8 px-8 rounded-lg border  "
+            style={{ backgroundColor: "white" }}
+          >
+            <div className="space-y-6 ">
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className="mt-7">
+                <p className="mb-5 text-black">
+                The staff members are incredibly knowledgeable and helpful. They always go above and beyond to assist me in finding the books I'm looking for."
+                </p>
+
+                <Avatar
+                  img={propic}
+                  alt="avatar of Jese"
+                  rounded
+                  className="w-10 mb-4"
+                />
+                <h5 className="text-lg font-medium text-black">Jese Leos</h5>
+                <p className="text-base text-black">Teacher</p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide
+            className="shadow-2xl  py-8 px-8 rounded-lg border  "
+            style={{ backgroundColor: "white" }}
+          >
+            <div className="space-y-6 ">
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className="mt-7">
+                <p className="mb-5 text-black">
+                I love the depth of the collection in various subject areas. Whether I'm researching a topic for school or just browsing for leisure reading, I can always find what I need.
+                </p>
+
+                <Avatar
+                  img={propic}
+                  alt="avatar of Jese"
+                  rounded
+                  className="w-10 mb-4"
+                />
+                <h5 className="text-lg font-medium text-black">Jese Leos</h5>
+                <p className="text-base text-black">Student</p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide
+            className="shadow-2xl  py-8 px-8 rounded-lg border  "
+            style={{ backgroundColor: "white" }}
+          >
+            <div className="space-y-6 ">
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className="mt-7">
+                <p className="mb-5 text-black">
+                Every interaction with the staff leaves me feeling valued as a patron. They're friendly, approachable, and genuinely interested in helping
+                </p>
+
+                <Avatar
+                  img={propic}
+                  alt="avatar of Jese"
+                  rounded
+                  className="w-10 mb-4"
+                />
+                <h5 className="text-lg font-medium text-black">Jese Leos</h5>
+                <p className="text-base text-black">bussinessman</p>
               </div>
             </div>
           </SwiperSlide>
@@ -103,131 +212,7 @@ const Reviews = () => {
                   className="w-10 mb-4"
                 />
                 <h5 className="text-lg font-medium text-black">Jese Leos</h5>
-                <p className="text-base text-black">Web Developer</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className="shadow-2xl  py-8 px-8 rounded-lg border  "
-            style={{ backgroundColor: "white" }}
-          >
-            <div className="space-y-6 ">
-              <div className="text-amber-500 flex gap-2">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-              <div className="mt-7">
-                <p className="mb-5 text-black">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, optio modi vitae in dolorum alias animi facere
-                  pariatur distinctio magni iusto impedit officia ad incidunt
-                  eos, exercitationem, odit praesentium iste.
-                </p>
-
-                <Avatar
-                  img={propic}
-                  alt="avatar of Jese"
-                  rounded
-                  className="w-10 mb-4"
-                />
-                <h5 className="text-lg font-medium text-black">Jese Leos</h5>
-                <p className="text-base text-black">Web Developer</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className="shadow-2xl  py-8 px-8 rounded-lg border  "
-            style={{ backgroundColor: "white" }}
-          >
-            <div className="space-y-6 ">
-              <div className="text-amber-500 flex gap-2">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-              <div className="mt-7">
-                <p className="mb-5 text-black">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, optio modi vitae in dolorum alias animi facere
-                  pariatur distinctio magni iusto impedit officia ad incidunt
-                  eos, exercitationem, odit praesentium iste.
-                </p>
-
-                <Avatar
-                  img={propic}
-                  alt="avatar of Jese"
-                  rounded
-                  className="w-10 mb-4"
-                />
-                <h5 className="text-lg font-medium text-black">Jese Leos</h5>
-                <p className="text-base text-black">Web Developer</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className="shadow-2xl  py-8 px-8 rounded-lg border  "
-            style={{ backgroundColor: "white" }}
-          >
-            <div className="space-y-6 ">
-              <div className="text-amber-500 flex gap-2">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-              <div className="mt-7">
-                <p className="mb-5 text-black">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, optio modi vitae in dolorum alias animi facere
-                  pariatur distinctio magni iusto impedit officia ad incidunt
-                  eos, exercitationem, odit praesentium iste.
-                </p>
-
-                <Avatar
-                  img={propic}
-                  alt="avatar of Jese"
-                  rounded
-                  className="w-10 mb-4"
-                />
-                <h5 className="text-lg font-medium text-black">Jese Leos</h5>
-                <p className="text-base text-black">Web Developer</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className="shadow-2xl  py-8 px-8 rounded-lg border  "
-            style={{ backgroundColor: "white" }}
-          >
-            <div className="space-y-6 ">
-              <div className="text-amber-500 flex gap-2">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-              <div className="mt-7">
-                <p className="mb-5 text-black">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, optio modi vitae in dolorum alias animi facere
-                  pariatur distinctio magni iusto impedit officia ad incidunt
-                  eos, exercitationem, odit praesentium iste.
-                </p>
-
-                <Avatar
-                  img={propic}
-                  alt="avatar of Jese"
-                  rounded
-                  className="w-10 mb-4"
-                />
-                <h5 className="text-lg font-medium text-black">Jese Leos</h5>
-                <p className="text-base text-black">Web Developer</p>
+                <p className="text-base text-black">civil engineer</p>
               </div>
             </div>
           </SwiperSlide>

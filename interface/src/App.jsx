@@ -27,12 +27,13 @@ import { Lists } from "./pages/Lists";
 import AddBooks from "./pages/AddBooks";
 import Profile from "./pages/Profile";
 import Borrow from "./pages/Borrow";
-
+import {  Navigate } from 'react-router-dom';
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
+      <Route path="/*" element={<Navigate to="/" />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         {/* <Route path="/Shop" element={<Shop />} /> */}
