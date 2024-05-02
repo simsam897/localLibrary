@@ -1,16 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {signInStart , signInSuccess, signInFailure} from "../redux/userSlice";
-import { useDispatch , useSelector } from "react-redux";
+import { signInStart, signInSuccess, signInFailure } from "../redux/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { Alert } from "@mui/material";
 import { Auth } from "../componenets/Auth";
 export default function SignIn() {
   const [formData, setFormData] = React.useState({});
 
-  const {loading , error:errorMessage} = useSelector((state) => state.user);
-const dispatch = useDispatch();
-  const  navigate = useNavigate();
+  const { loading, error: errorMessage } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
@@ -19,7 +19,7 @@ const dispatch = useDispatch();
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.email || !formData.password) {
-      return  dispatch(signInFailure("all fields are required"));
+      return dispatch(signInFailure("all fields are required"));
     }
     try {
       dispatch(signInStart());
@@ -35,10 +35,9 @@ const dispatch = useDispatch();
         dispatch(signInFailure(data.message));
       }
 
-  
       if (res.ok) {
-       dispatch(signInSuccess(data));
-       navigate(to="/");
+        dispatch(signInSuccess(data));
+        navigate((to = "/"));
       } else {
         return alert(data.message);
       }
@@ -101,7 +100,7 @@ const dispatch = useDispatch();
               >
                 Sign In
               </button>
-              <Auth />
+              {/* <Auth /> */}
             </form>
 
             <hr className="my-6 border-gray-300 w-full" />
@@ -158,9 +157,11 @@ const dispatch = useDispatch();
               </a>
             </p>
 
-            {errorMessage &&(
-            <Alert className="mt-5" color="failure">{errorMessage}
-            </Alert>)}
+            {errorMessage && (
+              <Alert className="mt-5" color="failure">
+                {errorMessage}
+              </Alert>
+            )}
           </div>
         </div>
       </section>
