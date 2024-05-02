@@ -1,8 +1,9 @@
-
 import { useEffect, useState } from "react";
 // import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
 // import { MdDashboard } from "react-icons/md";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Button } from "flowbite-react";
+import { HiAdjustments, HiCloudDownload, HiUserCircle } from "react-icons/hi";
 
 export default function Bar() {
   const location = useLocation();
@@ -16,36 +17,70 @@ export default function Bar() {
     setTab(tabFromUrl);
   }, [location.search]);
   return (
-    <div className="flex justify-center gap-5  mt-4 w-full ">
-      <Link to="/dashboard?tab=welcome">
-        <button className="bg-gray-600 text-white px-3 py-3 rounded-lg font-bold ">
-          Welcome
-        </button>
-      </Link>
+    <>
+      <div className="absolute top-20 ">
+        <div className="flex justify-around">
+          <Link to="/dashboard?tab=dashboard">
+            <Button
+              gradientMonochrome="info"
+              className="font-extrabold items-center text-[#202738]"
+            >
+              <HiUserCircle className="mr-3 h-7 w-7" />
+              Dashboard
+            </Button>
+          </Link>
 
-      <Link to="/dashboard?tab=profile">
-        <button className=" bg-gray-600 text-white px-3 py-3 rounded-lg font-bold ">
-          profile
-        </button>
-      </Link>
+          <Link to="/dashboard?tab=profile">
+            <Button
+              gradientMonochrome="info"
+              className="font-extrabold items-center text-[#202738]"
+            >
+              <HiUserCircle className="mr-3 h-7 w-7" />
+              profile
+            </Button>
+          </Link>
 
-      <Link to="/dashboard?tab=dashboard">
-        <button className="bg-gray-600 text-white px-3 py-3 rounded-lg font-bold ">
-          Dashboard
-        </button>
-      </Link>
+          <Link to="/dashboard?tab=add-book">
+            <Button
+              gradientMonochrome="info"
+              className="font-extrabold items-center text-[#202738]"
+            >
+              <HiUserCircle className="mr-3 h-7 w-7" />
+              Add books
+            </Button>
+          </Link>
 
-      <Link to="/dashboard?tab=borrow">
-        <button className="bg-gray-600 text-white px-3 py-3 rounded-lg font-bold ">
-          Borrow section
-        </button>
-      </Link>
+          <Link to="/dashboard?tab=borrow">
+            <Button
+              gradientMonochrome="info"
+              className="font-extrabold items-center text-[#202738]"
+            >
+              <HiUserCircle className="mr-3 h-7 w-7" />
+              Borrow section
+            </Button>
+          </Link>
 
-      <Link to="/dashboard?tab=return">
-        <button className="bg-gray-600 text-white px-3 py-3 rounded-lg font-bold ">
-          Return
-        </button>
-      </Link>
-    </div>
+          <Link to="/dashboard?tab=return">
+            <Button
+              gradientMonochrome="info"
+              className="font-extrabold items-center text-[#202738]"
+            >
+              <HiUserCircle className="mr-3 h-7 w-7" />
+              Return
+            </Button>
+          </Link>
+
+          <Link to="/dashboard?tab=borrowed-books">
+            <Button
+              gradientMonochrome="info"
+              className="font-extrabold items-center text-[#202738]"
+            >
+              <HiUserCircle className="mr-3 h-7 w-7" />
+              View Issued Book
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </>
   );
 }

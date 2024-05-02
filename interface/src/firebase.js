@@ -5,13 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCgra_bFKce_GkxKHnEScGLdMlGd-SOgw8",
-  authDomain: "local-library-management-sys.firebaseapp.com",
-  projectId: "local-library-management-sys",
-  storageBucket: "local-library-management-sys.appspot.com",
-  messagingSenderId: "1041991910446",
-  appId: "1:1041991910446:web:b9e00fe7363d7ea5b40bbf"
+  apiKey: "AIzaSyBshvwP2jRO42iJd_oF95wsxw1Cr-6eSsQ",
+  authDomain: "mern-library-5b995.firebaseapp.com",
+  projectId: "mern-library-5b995",
+  storageBucket: "mern-library-5b995.appspot.com",
+  messagingSenderId: "61362320834",
+  appId: "1:61362320834:web:7be369a8915daecade125b",
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);

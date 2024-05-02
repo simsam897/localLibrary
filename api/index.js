@@ -2,10 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import bookRouter from "./routes/book.route.js";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUI from "swagger-ui-express";
-import authRoutes from "./routes/auth.route.js";
+import userRouters from "./routes/user.route.js";
+import authRouters from "./routes/auth.route.js";
+import postRouters from "./routes/post.route.js";
+import studentRouters from "./routes/student.route.js";
+import bookRouter from "./routes/book.route.js";
 import cookieParser from "cookie-parser";
 import path from "path";
 
@@ -52,7 +55,10 @@ const specification = swaggerJSDoc(options);
 // Routes
 
 app.use("/api/book", bookRouter);
-app.use("/api/auth", authRoutes);
+app.use("/api/user", userRouters);
+app.use("/api/auth", authRouters);
+app.use("/api/post", postRouters);
+app.use("/api/student", studentRouters);
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specification));
 
 app.use(express.static(path.join(__dirname, "/interface/dist")));

@@ -1,10 +1,46 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaBlog, FaBarsStaggered, FaXmark } from "react-icons/fa6";
+import { useDispatch, useSelector } from "react-redux";
+import { signoutSuccess } from "../redux/user/userSlice";
+import { useNavigate } from "react-router-dom";
+import { Avatar, Button, Dropdown } from "flowbite-react";
+import { FaUserCheck, FaSignOutAlt } from "react-icons/fa";
+import { ImProfile } from "react-icons/im";
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSticky, setSticky] = useState(false);
 
+  const path = useLocation().pathname;
+  const location = useLocation();
+  const { currentUser } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(location.search);
+    const searchTermFromUrl = urlParams.get("searchTerm");
+    if (searchTermFromUrl) {
+      setSearchTerm(searchTermFromUrl);
+    }
+  }, [location.search]);
+
+  const handleSignout = async () => {
+    try {
+      const res = await fetch("/api/user/signout", {
+        method: "POST",
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        console.log(data.message);
+      } else {
+        dispatch(signoutSuccess());
+        navigate("/");
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   // toggle Menu
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -65,11 +101,60 @@ const Navbar = () => {
             </ul>
 
             <ul className="  flex  justify-center items-center  ">
-              <Link to="/signin">
-                <button className="bg-[#14A672] text-white font-semibold px-5 py-2 rounded hover:bg-black trasition-all duration-300 mr-3   ">
-                  Sign In
-                </button>
-              </Link>
+              {currentUser ? (
+                <>
+                  <Dropdown
+                    arrowIcon={false}
+                    inline
+                    label={
+                      <Avatar
+                        alt="user"
+                        img={currentUser.profilePicture}
+                        rounded
+                      />
+                    }
+                  >
+                    <Dropdown.Header>
+                      <FaUserCheck className="w-10 h-10" color="navy" />
+
+                      <span className="block text-md font-bold text-black truncate">
+                        @{currentUser.username}
+                      </span>
+                      <span className="block text-sm font-medium text-black truncate">
+                        {currentUser.email}
+                      </span>
+                    </Dropdown.Header>
+
+                    <Link to="/dashboard?tab=dashboard">
+                      <Dropdown.Item className="text-blue-500 font-semibold">
+                        <ImProfile className="w-4 h-4 mr-2" color="blue" />
+                        Dashboard
+                      </Dropdown.Item>
+                    </Link>
+
+                    <Dropdown.Divider />
+
+                    <Dropdown.Item
+                      className="text-red-500 font-semibold"
+                      onClick={handleSignout}
+                    >
+                      <FaSignOutAlt className="w-4 h-4 mr-2" color="red" />
+                      Sign out
+                    </Dropdown.Item>
+                  </Dropdown>
+                </>
+              ) : (
+                <Link to="/signin">
+                  <Button
+                    className="bg-[#14A672] text-white font-semibold px-5 py-2 rounded hover:bg-black trasition-all duration-300 mr-3 "
+                    color="gray"
+                    pill
+                    outline
+                  >
+                    <span className="hover:text-black">Sign In</span>
+                  </Button>
+                </Link>
+              )}
             </ul>
 
             {/* btn for lg devices */}
